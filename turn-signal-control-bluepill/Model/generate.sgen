@@ -1,0 +1,108 @@
+GeneratorModel for create::c {
+
+	statechart blink {
+
+		feature Outlet {
+			targetProject = "turn-signal-control-bluepill"
+			targetFolder = "Core/Src"
+			libraryTargetFolder = "Core/Inc"
+			apiTargetFolder = "Core/Inc"
+		}
+		
+		feature GeneralFeatures {
+			timerService = true
+		}
+		
+		feature FunctionInlining {
+			inlineReactions = true
+			inlineEntryActions = true
+			inlineExitActions = true
+			inlineEnterSequences = true
+			inlineExitSequences = true
+			inlineChoices = true
+			inlineEnterRegion = true
+			inlineExitRegion = true
+			inlineEntries = true
+		}
+		
+		
+	}
+	
+	
+	statechart flash {
+
+		feature Outlet {
+			targetProject = "turn-signal-control-bluepill"
+			targetFolder = "Core/Src"
+			libraryTargetFolder = "Core/Inc"
+			apiTargetFolder = "Core/Inc"
+		}
+		
+		feature GeneralFeatures {
+			timerService = true
+		}		
+		
+		feature FunctionInlining {
+			inlineReactions = true
+			inlineEntryActions = true
+			inlineExitActions = true
+			inlineEnterSequences = true
+			inlineExitSequences = true
+			inlineChoices = true
+			inlineEnterRegion = true
+			inlineExitRegion = true
+			inlineEntries = true
+		}
+		
+	}
+	 
+	
+	statechart buttons {
+
+		feature Outlet {
+			targetProject = "turn-signal-control-bluepill"
+			targetFolder = "Core/Src"
+			libraryTargetFolder = "Core/Inc"
+			apiTargetFolder = "Core/Inc"
+		}
+		
+		feature FunctionInlining {
+			inlineReactions = true
+			inlineEntryActions = true
+			inlineExitActions = true
+			inlineEnterSequences = true
+			inlineExitSequences = true
+			inlineChoices = true
+			inlineEnterRegion = true
+			inlineExitRegion = true
+			inlineEntries = true
+		}
+		
+				
+	}
+	
+	statechart signalcontrol {
+
+		feature Outlet {
+			targetProject = "turn-signal-control-bluepill"
+			targetFolder = "Core/Src"
+			libraryTargetFolder = "Core/Inc"
+			apiTargetFolder = "Core/Inc"
+		}
+
+		feature FunctionInlining {
+			inlineReactions = true
+			inlineEntryActions = true
+			inlineExitActions = true
+			inlineEnterSequences = true
+			inlineExitSequences = true
+			inlineChoices = true
+			inlineEnterRegion = true
+			inlineExitRegion = true
+			inlineEntries = true
+		}
+				
+	}
+	
+	
+}

@@ -1,0 +1,5 @@
+Debug/
+Drivers/
+*.cov
+*.sctunit.xml
+*.ld

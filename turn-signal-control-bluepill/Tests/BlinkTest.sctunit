@@ -1,0 +1,74 @@
+testclass Test for statechart blink {
+	
+	/* The first blink cycle starts immediately with switching on led 1. */
+	@Test operation led_1_On_OnEnter() {
+		// given
+		
+		// when
+		enter
+		
+		// then
+		assert called switchOn(1)		
+	}
+	
+	
+	/* After 200ms all leds were switched on. */
+	@Test operation all_on_after_200_ms() {
+		// given
+		led_1_On_OnEnter
+		
+		// when
+		proceed 200 ms
+		
+		// then
+		assert called switchOn(2)
+		assert called switchOn(3)
+	}
+	
+	
+	/* from 400 to 499 ms the last led is on. */
+	@Test operation last_led_on_from_400_to_499_ms() {
+		// given
+		all_on_after_200_ms
+		
+		// when
+		proceed 200 ms
+		
+		// then
+		assert called switchOff(1)
+		assert called switchOff(2)
+		assert ! called switchOff(3)
+		
+		// when
+		proceed 99 ms
+		
+		// then
+		assert called switchOff(1)
+		assert called switchOff(2)
+		assert ! called switchOff(3)
+		
+	}
+	
+
+	/* A blink cycle is complete if all leds were switched on and off. */
+	@Test operation cycle_completes_on_dark() {
+		// given
+		enter
+		
+		// when
+		proceed 500 ms
+		
+		// then
+		assert active(main.Dark)		
+		assert cycleCompleted
+		
+		// when
+		proceed 1000 ms
+		assert active(main.Dark)		
+		assert cycleCompleted
+		
+	}
+	
+		
+		
+}

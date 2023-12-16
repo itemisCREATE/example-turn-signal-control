@@ -1,0 +1,17 @@
+testclass HazardTest for statechart signalcontrol {
+	
+	@Test
+	operation hazardModeMustBeReachableFromBlinkMode() {
+		// given
+		enter
+		raise right: false
+		assert active (main.Blink.r.Right)
+		
+		// when
+		proceed 5s
+		raise hazard
+		
+		// then
+		assert active ( main.Hazard_Lights)
+	}
+}
